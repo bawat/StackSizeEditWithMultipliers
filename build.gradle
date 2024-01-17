@@ -13,17 +13,7 @@ repositories {
 	maven { url = "https://storage.googleapis.com/devan-maven/" }
 	maven { url = "https://maven.shedaniel.me/" }
 	maven { url = "https://maven.terraformersmc.com/releases/" }
-	exclusiveContent {
-		forRepository {
-			maven {
-				name = "Modrinth"
-				url = "https://api.modrinth.com/maven"
-			}
-		}
-		filter {
-			includeGroup "maven.modrinth"
-		}
-	}
+	maven { url 'https://www.cursemaven.com' }
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -40,8 +30,8 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	include "maven.modrinth:stacc-api:${project.stacc_version}"
-	modRuntimeOnly(include "maven.modrinth:stacc-api:${project.stacc_version}")
+	include "curse.maven:stacc-api-820136:4995895"
+	modRuntimeOnly(include "curse.maven:stacc-api-820136:4995895")
 
 	modApi("me.shedaniel.cloth:cloth-config-fabric:11.1.106") {
 		exclude(group: "net.fabricmc.fabric-api")
@@ -91,13 +81,7 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
+			from components.java
 		}
 	}
 
