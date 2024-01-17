@@ -55,7 +55,7 @@ public class StackSizeEdit implements ModInitializer {
 			LOGGER.warn("Stack Size Edit: Make sure to use the format, \"mod:item:max_stack\", or \"#tag:item:max_stack\".");
 		}
 
-		LOGGER.info(configMsg.equals("save") ? "Stack Size Edit: Config saved!": "Stacker: Config "+configMsg+"ed!");
+		LOGGER.info(configMsg.equals("save") ? "Stack Size Edit: Config saved!": "Stack Size Edit: Config "+configMsg+"ed!");
 	}
 	public static void setMax(Item item, int max) {
 		if (max >0) {
