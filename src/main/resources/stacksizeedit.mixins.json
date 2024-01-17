@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "package": "net.averageanime.stacksizeedit.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AnvilScreenHandlerMixin",
+    "BucketItemMixin",
+    "BundleItemMixin",
+    "DispenserBehaviorMixin",
+    "HorseScreenHandlerMixin",
+    "ItemAccess",
+    "ItemStackMixin",
+    "LimitFurnaceStackMixin",
+    "MilkBucketItemMixin",
+    "MusicDiscItemMixin",
+    "StewItemMixin"
+  ],
+  "client": [
+    "ItemRenderScaleMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

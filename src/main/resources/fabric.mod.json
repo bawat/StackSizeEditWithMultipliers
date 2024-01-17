@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "stacksizeedit",
+  "version": "1.0.0",
+  "name": "Stack Size Edit",
+  "description": "Edit the stack size limit.",
+  "authors": [
+    "average_anime"
+  ],
+  "contact": {
+    "homepage": "https://curseforge.com/members/average_anime/projects",
+    "sources": "https://curseforge.com/members/average_anime/projects"
+  },
+  "license": "GPLv3",
+  "icon": "assets/stacksizeedit/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.averageanime.stacksizeedit.StackSizeEdit"
+    ],
+    "modmenu": [
+      "net.averageanime.stacksizeedit.gui.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "stacksizeedit.mixins.json"
+  ],
+  "depends": {
+    "cloth-config": "*",
+    "fabricloader": ">=0.14.24",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "": "*"
+  }
+}
