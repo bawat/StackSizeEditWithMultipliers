@@ -14,5 +14,7 @@ Stack Size Edit [Fabric] is a mod that allows you to edit the stack size limit o
 * Base code is from [Stacker](https://www.curseforge.com/minecraft/mc-mods/stacker)
 
 ### **My Other Mods**
+
 * [Create: Food](https://www.curseforge.com/minecraft/mc-mods/create-food-fabric)
 * [Create: Metalwork](https://www.curseforge.com/minecraft/mc-mods/create-metalwork-fabric)
+* [Rune Essence](https://www.curseforge.com/minecraft/mc-mods/rune-essence)
