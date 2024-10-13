@@ -1,0 +1,453 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "minecraft:totem_of_undying",
+      "required": false
+    },
+    {
+      "id": "minecraft:saddle",
+      "required": false
+    },
+    {
+      "id": "minecraft:minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:chest_minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:tnt_minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:furnace_minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:hopper_minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:chest_minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:oak_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:oak_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:spruce_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:spruce_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:birch_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:birch_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:jungle_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:jungle_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:acacia_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:acacia_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:cherry_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:cherry_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:dark_mangrove_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:dark_mangrove_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:mangrove_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:mangrove_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:bamboo_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:bamboo_chest_boat",
+      "required": false
+    },
+    {
+      "id": "minecraft:mushroom_stew",
+      "required": false
+    },
+    {
+      "id": "minecraft:water_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:lava_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:milk_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:pufferfish_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:salmon_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:cod_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:tropical_fish_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:axolotl_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:tadpole_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:bundle",
+      "required": false
+    },
+    {
+      "id": "minecraft:spyglass",
+      "required": false
+    },
+    {
+      "id": "minecraft:cake",
+      "required": false
+    },
+    {
+      "id": "minecraft:bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:white_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:orange_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:yellow_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:magenta_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:orange_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:light_blue_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:lime_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:pink_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:gray_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:light_gray_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:purple_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:blue_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:brown_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:green_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:black_bed",
+      "required": false
+    },
+    {
+      "id": "minecraft:potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:writable_book",
+      "required": false
+    },
+    {
+      "id": "minecraft:enchanted_book",
+      "required": false
+    },
+    {
+      "id": "minecraft:rabbit_stew",
+      "required": false
+    },
+    {
+      "id": "minecraft:iron_horse_armor",
+      "required": false
+    },
+    {
+      "id": "minecraft:golden_horse_armor",
+      "required": false
+    },
+    {
+      "id": "minecraft:diamond_horse_armor",
+      "required": false
+    },
+    {
+      "id": "minecraft:leather_horse_armor",
+      "required": false
+    },
+    {
+      "id": "minecraft:command_block_minecart",
+      "required": false
+    },
+    {
+      "id": "minecraft:beetroot_soup",
+      "required": false
+    },
+    {
+      "id": "minecraft:splash_potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:lingering_potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:knowledge_potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:debug_stick",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_13",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_cat",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_blocks",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_chirp",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_far",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_mall",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_mellohi",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_stal",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_strad",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_ward",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_11",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_wait",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_otherside",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_relic",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_5",
+      "required": false
+    },
+    {
+      "id": "minecraft:music_disk_pigstep",
+      "required": false
+    },
+    {
+      "id": "minecraft:crossbow",
+      "required": false
+    },
+    {
+      "id": "minecraft:suspicious_stew",
+      "required": false
+    },
+    {
+      "id": "minecraft:flowing_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "minecraft:creeper_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "minecraft:skull_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "minecraft:mojang_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "minecraft:globe_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "minecraft:piglin_banner_pattern",
+      "required": false
+    },
+    {
+      "id": "minecraft:goat_horn",
+      "required": false
+    },
+    {
+      "id": "minecraft:shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:white_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:orange_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:red_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:yellow_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:magenta_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:orange_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:light_blue_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:lime_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:pink_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:gray_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:light_gray_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:purple_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:blue_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:brown_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:green_shulker_box",
+      "required": false
+    },
+    {
+      "id": "minecraft:black_shulker_box",
+      "required": false
+    }
+  ]
+}
