@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "stacksizeedit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "Stack Size Edit",
   "description": "Edit the stack size limit.",
   "authors": [
