@@ -8,6 +8,7 @@ import net.averageanime.stacksizeedit.config.ModConfig;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -20,10 +21,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
 public class StackSizeEdit implements ModInitializer {
 	private static final Logger LOGGER = LogManager.getLogger("Stack Size Edit");
-	private static net.averageanime.stacksizeedit.StackSizeEdit stackSizeEdit;
+	private static StackSizeEdit stackSizeEdit;
 	static ConfigHolder<ModConfig> StackSizeEditConfig;
 
 	@Override
@@ -37,37 +37,49 @@ public class StackSizeEdit implements ModInitializer {
 		ServerLifecycleEvents.SERVER_STARTED.register(server -> loadStackSizeEdit("load"));
 		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resourceManager, success) -> loadStackSizeEdit("reload"));
 	}
+
 	public static void loadStackSizeEdit(String configMsg) {
-		LOGGER.info("Stack Size Edit: Attempting to "+configMsg+" config...");
+		LOGGER.info("Stack Size Edit: Attempting to " + configMsg + " config...");
 		Set<String> invalidSet = new HashSet<>();
+
 		for (Item item : Registries.ITEM) {
 			if (!item.isDamageable()) {
-				net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, StackSizeEditConfig.getConfig().maxStacker);
+				if (StackSizeEditConfig.getConfig().enableMaxSize) {
+					StackSizeEdit.setMax(item, StackSizeEditConfig.getConfig().maxStacker);
+				} else {
+					StackSizeEdit.setMax(item, item.getMaxCount());
+				}
 			}
-			net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, net.averageanime.stacksizeedit.StackSizeEdit.overrideItem(item, StackSizeEditConfig.getConfig().itemOverride, invalidSet));
+
+			StackSizeEdit.setMax(item, StackSizeEdit.overrideItem(item, StackSizeEditConfig.getConfig().itemOverride, invalidSet));
 		}
+
 		if (!invalidSet.isEmpty()) {
 			LOGGER.error("Stack Size Edit: Invalid override entries!");
 			LOGGER.warn("Stack Size Edit: The following entries were invalid:");
 			for (String invalid : invalidSet) {
-				LOGGER.warn("Stack Size Edit: \""+invalid+"\"");
+				LOGGER.warn("Stack Size Edit: \"" + invalid + "\"");
 			}
 			LOGGER.warn("Stack Size Edit: Make sure to use the format, \"mod:item:max_stack\", or \"#tag:item:max_stack\".");
 		}
 
-		LOGGER.info(configMsg.equals("save") ? "Stack Size Edit: Config saved!": "Stack Size Edit: Config "+configMsg+"ed!");
+		LOGGER.info(configMsg.equals("save") ? "Stack Size Edit: Config saved!" : "Stack Size Edit: Config " + configMsg + "ed!");
 	}
+
 	public static void setMax(Item item, int max) {
-		if (max >0) {
-			((ItemAccess) item).setMaxCount(max);
+		if (max > 0) {
+				((ItemAccess) item).setMaxCount(max);
 		}
 	}
+
 	public ModConfig getStackerConfig() {
 		return StackSizeEditConfig.getConfig();
 	}
-	public static net.averageanime.stacksizeedit.StackSizeEdit getStacker() {
+
+	public static StackSizeEdit getStacker() {
 		return stackSizeEdit;
 	}
+
 	public static boolean isValid(String overrideEntry, String[] splitEntry, Set<String> invalidSet) {
 		if (splitEntry.length != 3) {
 			invalidSet.add(overrideEntry);
@@ -81,8 +93,9 @@ public class StackSizeEdit implements ModInitializer {
 		}
 		return true;
 	}
+
 	public static Integer overrideItem(Item item, List<String> overrideList, Set<String> invalidSet) {
-		for(String overrideEntry : overrideList) {
+		for (String overrideEntry : overrideList) {
 			if (overrideEntry.startsWith("#")) {
 				String[] splitEntry = overrideEntry.trim().substring(1).split(":"); // split into three parts: tag id, item name, max count
 				if (isValid(overrideEntry, splitEntry, invalidSet)) {

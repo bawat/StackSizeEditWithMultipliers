@@ -12,6 +12,11 @@ import java.util.List;
 public class ModConfig implements ConfigData {
 
     @ConfigEntry.Gui.PrefixText
+
+    @ConfigEntry.Category("StackSettings")
+    @Comment("Restart required ONLY after turning OFF. Use /reload after turning ON.")
+    public boolean enableMaxSize = false;
+
     @ConfigEntry.Category("StackSettings")
     @Comment("Do not set larger than 2147483647 or below 1.")
     public int maxStacker = 99;
