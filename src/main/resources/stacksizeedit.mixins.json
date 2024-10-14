@@ -9,7 +9,6 @@
     "DispenserBehaviorMixin",
     "HorseScreenHandlerMixin",
     "ItemAccess",
-    "ItemStackMixin",
     "LimitFurnaceStackMixin",
     "MilkBucketItemMixin",
     "MusicDiscItemMixin",

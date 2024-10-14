@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 
 @Mixin (Item.class)
 public interface ItemAccess {
-
+    
     @Accessor
     void setMaxCount(int count);
 }
