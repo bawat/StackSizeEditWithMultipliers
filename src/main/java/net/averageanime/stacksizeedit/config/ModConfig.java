@@ -11,11 +11,11 @@ import java.util.List;
 @Config(name = "stacksizeedit")
 public class ModConfig implements ConfigData {
 
-    @ConfigEntry.Category("StackSettings")
-    @Comment("Restart required after turning OFF.")
-    public boolean enableMaxSize = false;
-
     @ConfigEntry.Gui.PrefixText
+
+    @ConfigEntry.Category("StackSettings")
+    @Comment("Restart required ONLY after turning OFF. Use /reload after turning ON.")
+    public boolean enableMaxSize = false;
 
     @ConfigEntry.Category("StackSettings")
     @Comment("Do not set larger than 2147483647 or below 1.")
