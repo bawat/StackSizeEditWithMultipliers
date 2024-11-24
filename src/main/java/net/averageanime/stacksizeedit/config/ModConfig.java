@@ -12,6 +12,14 @@ import java.util.List;
 public class ModConfig implements ConfigData {
 
     @ConfigEntry.Gui.PrefixText
+    
+    @ConfigEntry.Category("StackSettings")
+    @Comment("Multiply the default vanilla max sizes by...")
+    public int maxStackSizeMultiplier = 1;
+    
+    @ConfigEntry.Category("StackSettings")
+    @Comment("Multiply single stack items too?")
+    public boolean ignoreSingleStackItems = false;
 
     @ConfigEntry.Category("StackSettings")
     @Comment("Restart required ONLY after turning OFF. Use /reload after turning ON.")

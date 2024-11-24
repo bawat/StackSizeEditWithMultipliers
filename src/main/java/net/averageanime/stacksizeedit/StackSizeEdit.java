@@ -42,16 +42,19 @@ public class StackSizeEdit implements ModInitializer {
 		LOGGER.info("Stack Size Edit: Attempting to " + configMsg + " config...");
 		Set<String> invalidSet = new HashSet<>();
 
+		ModConfig config = StackSizeEditConfig.getConfig();
+		int stackMultiplier;
 		for (Item item : Registries.ITEM) {
+			stackMultiplier = (config.ignoreSingleStackItems && item.getMaxCount() == 1)? 1 : config.maxStackSizeMultiplier;
 			if (!item.isDamageable()) {
-				if (StackSizeEditConfig.getConfig().enableMaxSize) {
-					net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, StackSizeEditConfig.getConfig().maxStacker);
+				if (config.enableMaxSize) {
+					net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, config.maxStacker * stackMultiplier);
 				} else {
-					net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, item.getMaxCount());
+					net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, item.getMaxCount() * stackMultiplier);
 				}
 			}
 
-			net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, net.averageanime.stacksizeedit.StackSizeEdit.overrideItem(item, StackSizeEditConfig.getConfig().itemOverride, invalidSet));
+			net.averageanime.stacksizeedit.StackSizeEdit.setMax(item, net.averageanime.stacksizeedit.StackSizeEdit.overrideItem(item, config.itemOverride, invalidSet));
 		}
 
 		if (!invalidSet.isEmpty()) {
